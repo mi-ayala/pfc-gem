@@ -83,6 +83,11 @@ save(sprintf('%sMetaData.mat', out_dir), 'n_atoms', 'ppa', 'm', 'beta', 'tau', '
 F = 2.0/hx^2 * (cos(2.0*pi*X/Nx) - 1.0) + 2.0/hy^2 * (cos(2.0*pi*Y/Ny) - 1.0);
 G_PFC = (1.0 - tau * F .* ((F+1.0).^2 + C - beta)).^(-1);
 
+%%%% q = q1\q2
+% q = (2*cos(pi/5))^(-1)
+% G_PFC = (1.0 - tau * F .* ( ( (F+q^2).*(F+1.0) ).^2 + C - beta ) ).^(-1);
+
+
 %Cleaning up
 clearvars X Y;
 
