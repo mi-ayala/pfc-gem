@@ -20,22 +20,22 @@ PFC_Evolution('', pfc_run_output_dir, 'NOISE', ...	%Use a random initial conditi
 
 
 %Measurement parameters
-load('~/Downloads/PFC_Test/PFC_Run/G1/MetaData.mat', 'L');	%This fetches the physical domain size
-gamma = 0.001;												%Isoperimetric ratio closeness check
-theta = 2.5*pi/180;											%Threshold misorientation
-alpha = 40;													%Threshold number of atoms per grain
+%load('~/Downloads/PFC_Test/PFC_Run/G1/MetaData.mat', 'L');	%This fetches the physical domain size
+%gamma = 0.001;												%Isoperimetric ratio closeness check
+%theta = 2.5*pi/180;											%Threshold misorientation
+%alpha = 40;													%Threshold number of atoms per grain
 
 %Run the grain and measurement extraction
-ats_output_dir = '~/Downloads/PFC_Test/ATS_Run/G1/';
-mkdir(ats_output_dir);
+%ats_output_dir = '~/Downloads/PFC_Test/ATS_Run/G1/';
+%mkdir(ats_output_dir);
 
-AtomsToStats(pfc_run_output_dir, [9, 10], ats_output_dir, ...	%Specify to extract the last two atom distributions
-	L, 1/gamma, theta, alpha, ...								%Processing parameters
-	true, ...													%Post-processing: Remove grains with only one neighbor
-	true, theta, ...											%Post-processing: Remove grains with misorientation below theta
-	true, n_atoms, ...											%Save colored pictures with resolution n_atoms
-	false);														%Verbose output
+%AtomsToStats(pfc_run_output_dir, [9, 10], ats_output_dir, ...	%Specify to extract the last two atom distributions
+%	L, 1/gamma, theta, alpha, ...								%Processing parameters
+%	true, ...													%Post-processing: Remove grains with only one neighbor
+%	true, theta, ...											%Post-processing: Remove grains with misorientation below theta
+%	true, n_atoms, ...											%Save colored pictures with resolution n_atoms
+%	false);														%Verbose output
 
 
 %Start the statistics plotting
-OverallAnalysis
+%OverallAnalysis
