@@ -1,7 +1,18 @@
 %PFC parameters
-n_atoms = 256;			%The number of atoms in each dimension
-ppa = 8;				%The number of pixels per atoms, this should be at least 8
-m = 0.07; beta = 0.025;	%PFC parameters
+n_atoms = 256;  %The number of atoms in each dimension
+ppa = 8;	%The number of pixels per atoms, this should be at least 8
+
+%%%%%%%%%%%%%%%%%%
+%%% PFC parameters
+%%%%%%%%%%%%%%%%%
+%m = 0.07; 
+%beta = 0.025;	
+%%%%%%%%%%%%%%%%%
+%%% Ten-fold symmetry
+m = 0.161060; 
+beta = 0.07;	%%%% Try -
+
+
 atom_level = -0.035;	%Extraction level for atoms, depends on (m, beta)
 
 %Run the PFC evolution
