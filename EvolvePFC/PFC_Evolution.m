@@ -60,7 +60,7 @@ switch init_cond
 			load(in_file, 'rseed');
 			rng(rseed);
 		else
-			rng('shuffle');
+			rng('default');
 			rseed = rng; rseed = rseed.Seed;
 			if VERBOSE fprintf('\nInitialized with random seed %d.\n', rseed); end
 		end
